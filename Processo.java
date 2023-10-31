@@ -28,7 +28,13 @@ public class Processo extends Thread {
     public void run(){
         for (int i = 0; i < numeroInteracoes; i++){
             System.out.println("Processo: ("+ this.nome+ "): "+i);
-    
-        }
+           
+
+            try{
+                Thread.sleep(i*100);
+            } catch (Exception e){
+                e.printStackTrace();
+            }
+         }  
     }
-}
+} 
